@@ -8,6 +8,7 @@ pushd open-sesame
 pip install dynet
 pip install nltk
 python -m nltk.downloader averaged_perceptron_tagger wordnet
+python -c "import nltk; nltk.download('punkt')"
 
 # requirement to download from Google Drive (requests is missing as dependency from here https://github.com/ndrplz/google-drive-downloader/)
 pip install googledrivedownloader requests
