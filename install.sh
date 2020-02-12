@@ -30,6 +30,8 @@ wget http://nlp.stanford.edu/data/glove.6B.zip
 unzip glove.6B.zip
 rm glove.6B.zip
 
+popd
+
 # FrameNet 1.7 models
 # https://drive.google.com/open?id=1sS0OPw1uYxeOUK0drkvfZsFkRNgnVUAC
 gdrive_download "1sS0OPw1uYxeOUK0drkvfZsFkRNgnVUAC" "./fn1.7-pretrained-targetid.tar.gz"
@@ -37,7 +39,6 @@ gdrive_download "1sS0OPw1uYxeOUK0drkvfZsFkRNgnVUAC" "./fn1.7-pretrained-targetid
 gdrive_download "1me1V0CrZF5HVWiDBqZ4LHZVSpsWfW3-8" "./fn1.7-pretrained-frameid.tar.gz"
 # https://drive.google.com/open?id=1ys-DIGhJSHgt8VjstMtlkPnYqtlzMSHe
 gdrive_download "1ys-DIGhJSHgt8VjstMtlkPnYqtlzMSHe" "./fn1.7-pretrained-argid.tar.gz"
-
 
 tar -xvzf fn1.7-pretrained-targetid.tar.gz
 tar -xvzf fn1.7-pretrained-frameid.tar.gz
@@ -48,7 +49,6 @@ rm fn1.7-pretrained-targetid.tar.gz
 rm fn1.7-pretrained-frameid.tar.gz
 rm fn1.7-pretrained-argid.tar.gz
 
-popd
 python -m sesame.preprocess
 
 popd
